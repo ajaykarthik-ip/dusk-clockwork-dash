@@ -107,10 +107,34 @@ export function TimesheetDashboard() {
         </div>
 
         {/* Daily Cards */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-semibold text-foreground font-display">
-            This Week
-          </h2>
+        <div className="space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <h2 className="text-2xl font-semibold text-foreground font-display">
+              This Week
+            </h2>
+            <div className="flex items-center gap-4">
+              {/* Week Pagination */}
+              <div className="flex items-center gap-2">
+                <button className="glass-card p-2 rounded-lg hover:bg-white/10 transition-all duration-200">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <span className="text-sm text-muted-foreground min-w-[120px] text-center">
+                  Dec 23 - Dec 29
+                </span>
+                <button className="glass-card p-2 rounded-lg hover:bg-white/10 transition-all duration-200">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+              {/* Submit Button */}
+              <button className="glass-card px-6 py-2 rounded-lg bg-gradient-to-r from-primary/20 to-primary-glow/20 border border-primary/30 hover:from-primary/30 hover:to-primary-glow/30 hover:border-primary/50 transition-all duration-200 text-sm font-medium">
+                Submit Week
+              </button>
+            </div>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4 animate-fade-in">
             {dailyData.map((day, index) => (
               <div key={day.day} style={{ animationDelay: `${index * 50}ms` }}>
