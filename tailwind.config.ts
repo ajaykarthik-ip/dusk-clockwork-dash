@@ -51,14 +51,18 @@ export default {
           hover: "hsl(var(--card-hover))",
         },
         glass: {
+          DEFAULT: "var(--glass-bg)",
           border: "var(--glass-border)",
-          bg: "var(--glass-bg)",
+          hover: "var(--glass-hover)",
+          shadow: "var(--glass-shadow)",
         },
       },
       backgroundImage: {
         'gradient-primary': 'var(--gradient-primary)',
-        'gradient-card': 'var(--gradient-card)',
-        'gradient-subtle': 'var(--gradient-subtle)',
+        'gradient-glass': 'var(--gradient-glass)',
+      },
+      backdropBlur: {
+        'glass': '16px',
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',

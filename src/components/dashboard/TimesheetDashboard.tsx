@@ -85,7 +85,7 @@ const dailyData = [
 
 export function TimesheetDashboard() {
   return (
-    <div className="min-h-screen bg-gradient-subtle p-6">
+    <div className="min-h-screen p-6 relative z-10">
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <div className="text-center space-y-4">

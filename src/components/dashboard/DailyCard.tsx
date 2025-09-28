@@ -16,8 +16,9 @@ interface DailyCardProps {
 
 export function DailyCard({ day, date, totalHours, projects, isToday }: DailyCardProps) {
   return (
-    <Card className={`group relative overflow-hidden bg-gradient-card border-glass-border backdrop-blur-sm hover:bg-card-hover transition-all duration-300 hover:shadow-glow hover:scale-[1.02] ${isToday ? 'ring-1 ring-primary/50' : ''}`}>
-      <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+    <Card className={`group relative overflow-hidden bg-glass backdrop-blur-glass border border-glass-border hover:bg-glass-hover transition-all duration-500 hover:shadow-glow hover:scale-[1.02] shadow-glass ${isToday ? 'ring-1 ring-primary/50 shadow-glow' : ''}`}>
+      <div className="absolute inset-0 bg-gradient-glass opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
       
       <div className="relative p-4">
         <div className="flex items-center justify-between mb-4">
@@ -44,7 +45,7 @@ export function DailyCard({ day, date, totalHours, projects, isToday }: DailyCar
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="flex items-center justify-between p-2 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors duration-200"
+              className="flex items-center justify-between p-2 rounded-lg bg-glass-hover/50 backdrop-blur-sm hover:bg-glass-hover transition-colors duration-300 border border-glass-border/30"
             >
               <div className="flex items-center space-x-2">
                 <div 

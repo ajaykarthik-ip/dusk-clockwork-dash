@@ -15,8 +15,9 @@ export function SummaryCard({ title, hours, subtitle, trend }: SummaryCardProps)
   }[trend || "neutral"];
 
   return (
-    <Card className="group relative overflow-hidden bg-gradient-card border-glass-border backdrop-blur-sm hover:bg-card-hover transition-all duration-300 hover:shadow-glow hover:scale-[1.02]">
-      <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+    <Card className="group relative overflow-hidden bg-glass backdrop-blur-glass border border-glass-border hover:bg-glass-hover transition-all duration-500 hover:shadow-glow hover:scale-[1.02] shadow-glass">
+      <div className="absolute inset-0 bg-gradient-glass opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
       
       <div className="relative p-6">
         <div className="flex items-center justify-between mb-4">
